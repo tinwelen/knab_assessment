@@ -7,14 +7,15 @@ import tinwel.UI.helpers.DashboardPage;
 import java.time.Duration;
 
 public class DashboardSteps extends UIInteractionSteps {
-
-    @Step("Check if default board tile is shown")
-    public boolean defaultBoardIsDisplayed() {
-        return withTimeoutOf(Duration.ofSeconds(10)).find(DashboardPage.default_board_tile).isDisplayed();
+    @Step("Check if board tile is shown")
+    public boolean boardByNameIsDisplayed(String name) {
+        // TODO: add String format with board name
+        return withTimeoutOf(Duration.ofSeconds(10)).find(DashboardPage.board_tile_by_name).isDisplayed();
     }
 
-    @Step("Click default board tile")
-    public void clickDefaultBoard() {
-        $(DashboardPage.default_board_tile).click();
+    // TODO: add String format with board name
+    @Step("Click board tile by name")
+    public void clickBoardByName(String name) {
+        $(DashboardPage.board_tile_by_name).click();
     }
 }

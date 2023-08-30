@@ -5,5 +5,5 @@ import org.openqa.selenium.By;
 
 @DefaultUrl("https://trello.com/u/tinwel/boards")
 public class DashboardPage {
-    public static By default_board_tile = By.xpath("(//div[@title='My Trello board'])[1]");
+    public static By board_tile_by_name = By.xpath("(//div[@title='%s'])[1]");
 }
