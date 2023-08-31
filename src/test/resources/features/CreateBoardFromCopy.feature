@@ -1,8 +1,10 @@
 Feature: Create a new board from existing board page
 
   Background:
-    Given Someone is logged in
-    And They see "default" board page
+    Given Board page is open
+    And Someone clicks board menu button
 
-  Scenario: menu -> copy -> copy board pop up
-  Scenario: menu -> make board template (hidden behind upgrade)
+  Scenario: Make board template is hidden behind upgrade paywall
+
+  Scenario: Copy -> copy board pop up
+    # TODO

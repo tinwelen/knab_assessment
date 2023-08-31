@@ -2,7 +2,9 @@ package tinwel.UI.stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import tinwel.UI.helpers.BoardPage;
 import tinwel.UI.test_steps.BoardSteps;
 import tinwel.UI.test_steps.DashboardSteps;
 
@@ -16,12 +18,11 @@ public class BoardStepDefinitions {
     DashboardSteps dashboard;
 
     String boardName;
-    String defaultBoardName = "My Trello board";
 
     @And("They open {string} board")
     public void open_board_by_name(String name) {
         if (name.equals("default")) {
-            boardName = defaultBoardName;
+            boardName = BoardPage.defaultBoardName;
         } else {
             boardName = name;
         }
@@ -32,7 +33,7 @@ public class BoardStepDefinitions {
     @Then("They see {string} board page")
     public void board_page_is_open(String name) {
         if (name.equals("default")) {
-            boardName = defaultBoardName;
+            boardName = BoardPage.defaultBoardName;
         } else {
             boardName = name;
         }

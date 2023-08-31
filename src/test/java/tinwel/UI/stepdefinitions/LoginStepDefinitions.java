@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
+import tinwel.UI.helpers.BoardPage;
 import tinwel.UI.helpers.NavigationHelper;
 import tinwel.UI.test_steps.DashboardSteps;
 import tinwel.UI.test_steps.LoginSteps;
@@ -29,7 +30,7 @@ public class LoginStepDefinitions {
         login.click_continue();
         login.enter_password(login.defaultPassword);
         login.click_login();
-        assertThat(dashboard.defaultBoardIsDisplayed()).isTrue();
+        assertThat(dashboard.boardByNameIsDisplayed(BoardPage.defaultBoardName)).isTrue();
     }
 
     @When("Someone opens login page")
@@ -59,7 +60,8 @@ public class LoginStepDefinitions {
 
     @Then("They see dashboard page")
     public void theySeeDashboardPage() {
-        assertThat(dashboard.defaultBoardIsDisplayed()).isTrue();
+        assertThat(dashboard.boardByNameIsDisplayed(BoardPage.defaultBoardName)).isTrue();
+        assertThat(dashboard.sideMenuIsShown()).isTrue();
     }
 }
 
