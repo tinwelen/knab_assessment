@@ -1,8 +1,12 @@
-@ui @automated
+@UI @automated
 Feature: Create a new board
 
   Background:
     Given Someone is logged in
+
+  Scenario: Open board
+    When They open "default" board
+    Then They see "default" board page
 
   Scenario: Someone creates board from a templates side menu option
     When They click Templates side menu option

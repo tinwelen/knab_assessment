@@ -10,7 +10,6 @@ import java.time.Duration;
 public class DashboardSteps extends UIInteractionSteps {
     By board_tile_by_name;
 
-    // TODO: fix xpaths
     @Step("Check if board tile is shown")
     public boolean boardByNameIsDisplayed(String name) {
         board_tile_by_name = By.xpath(String.format("(//div[@title='%s'])[1]", name));

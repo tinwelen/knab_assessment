@@ -1,4 +1,4 @@
-@ui
+@UI
 Feature: Open a board
   All the possible ways to open an existing board, starting from the dashboard (https://trello.com)
 
@@ -8,10 +8,20 @@ Feature: Open a board
     And Second board is created
 
   Scenario: Recent menu in header
-
   Scenario: Starred menu in header
 
-#  TODO: Scenario: Header -> search
+  Scenario: Find a board from header search
+    When Someone clicks search input
+    Then They see search input size adjusted
+    When They enter default board name
+    Then They see default board in boards list
+    When they click View all results link
+    Then They see advanced search page
+    And They see search term in search input
+    And They see default board in boards list
+
+  Scenario: Recent boards list in focused search input dropdown
+  Scenario: Recent boards list on Advanced search page
 
   Scenario: "Recently viewed" block on Boards menu option page
     Given Someone selects "Boards" option in left side menu
@@ -20,7 +30,6 @@ Feature: Open a board
     Then They see board page
 
   Scenario: "Starred boards" block on Boards menu option page
-
   Scenario: Current workspace block on Boards menu option page
 
   Scenario: Workspace boards page
@@ -52,7 +61,6 @@ Feature: Open a board
     Then They see board page
 
   Scenario: "Recently viewed" block on Home menu option page
-
   Scenario: "Starred" block on Home menu option page
 
   Scenario: "Your boards" block on Workspace boards home page
@@ -71,7 +79,6 @@ Feature: Open a board
     Then They see board page
 
   Scenario: "Recently viewed" block on workspace highlights menu option page
-
   Scenario: "Up next" block on workspace highlights menu option page
 
   Scenario: Open workspace / boards page from a board page
@@ -88,7 +95,7 @@ Feature: Open a board
 
   Scenario: Open a board from left side menu on another board page
 
-  Scenario: Open the same board from left side menu on a board page
+  Scenario: Open the same board from left side menu on a board page | negative
     Given Someone selects "Boards" option in left side menu
     And They see workspace boards block
     When They click first board in block
@@ -98,9 +105,9 @@ Feature: Open a board
     And They see "Your boards" list
     And They click same board in list
     Then They see same board page open
-    And They do not see Network request sent
+    And They see no Open network request sent
 
   Scenario: Open a board by existing direct link
 
-  Scenario: Open a board by non-existent direct link
+  Scenario: Open a board by non-existent direct link | negative
     Then Someone sees 404 Taco page

@@ -1,4 +1,4 @@
-@ui @automated
+@UI @automated
 Feature: Open the default board
 
   Scenario: Login
@@ -8,8 +8,3 @@ Feature: Open the default board
     And They enter their password
     And They click login
     Then They see dashboard page
-
-  Scenario: Open board
-    Given Someone is logged in
-    When They click default board tile
-    Then They see default board screen

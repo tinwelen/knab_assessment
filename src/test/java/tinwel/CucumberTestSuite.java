@@ -9,10 +9,5 @@ import org.junit.runner.RunWith;
 @Suite
 @IncludeEngines("cucumber")
 @RunWith(CucumberWithSerenity.class)
-/*@CucumberOptions(
-        plugin = {"pretty"},
-        features = "src/test/resources/features"
-)
- */
-@SelectClasspathResource("/features")
+@SelectClasspathResource("/features/Automated")
 public class CucumberTestSuite {}

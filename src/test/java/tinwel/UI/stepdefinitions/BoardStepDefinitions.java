@@ -2,7 +2,6 @@ package tinwel.UI.stepdefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
 import tinwel.UI.helpers.BoardPage;
 import tinwel.UI.test_steps.BoardSteps;

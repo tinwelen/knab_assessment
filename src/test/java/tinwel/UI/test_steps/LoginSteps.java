@@ -11,22 +11,22 @@ public class LoginSteps extends UIInteractionSteps {
     public String defaultPassword = "KnabAssessment6";
 
     @Step("Enter email {0}")
-    public void enter_email(String email) {
+    public void enterEmail(String email) {
         $(LoginPage.email_input).sendKeys(email);
     }
 
     @Step("Click continue login button")
-    public void click_continue() {
+    public void clickContinue() {
         $(LoginPage.continue_button).click();
     }
 
     @Step("Enter password {0}")
-    public void enter_password(String password) {
+    public void enterPassword(String password) {
         withTimeoutOf(Duration.ofSeconds(10)).find(LoginPage.password_input).sendKeys(password);
     }
 
     @Step("Click submit login button")
-    public void click_login() {
+    public void clickLogin() {
         $(LoginPage.submit_button).click();
     }
 }

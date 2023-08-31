@@ -26,10 +26,10 @@ public class LoginStepDefinitions {
     @Given("Someone is logged in")
     public void someone_is_logged_in() {
         navigateTo.loginPage();
-        login.enter_email(login.defaultEmail);
-        login.click_continue();
-        login.enter_password(login.defaultPassword);
-        login.click_login();
+        login.enterEmail(login.defaultEmail);
+        login.clickContinue();
+        login.enterPassword(login.defaultPassword);
+        login.clickLogin();
         assertThat(dashboard.boardByNameIsDisplayed(BoardPage.defaultBoardName)).isTrue();
     }
 
@@ -40,22 +40,22 @@ public class LoginStepDefinitions {
 
     @And("They enter their email")
     public void theyEnterTheirEmail() {
-        login.enter_email(login.defaultEmail);
+        login.enterEmail(login.defaultEmail);
     }
 
     @And("They click continue")
     public void theyClickContinue() {
-        login.click_continue();
+        login.clickContinue();
     }
 
     @And("They enter their password")
     public void theyEnterTheirPassword() {
-        login.enter_password(login.defaultPassword);
+        login.enterPassword(login.defaultPassword);
     }
 
     @And("They click login")
     public void theyClickLogin() {
-        login.click_login();
+        login.clickLogin();
     }
 
     @Then("They see dashboard page")

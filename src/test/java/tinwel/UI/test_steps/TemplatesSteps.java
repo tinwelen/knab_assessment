@@ -3,7 +3,6 @@ package tinwel.UI.test_steps;
 import net.serenitybdd.core.steps.UIInteractionSteps;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.By;
-import tinwel.UI.helpers.DashboardPage;
 import tinwel.UI.helpers.TemplatesPage;
 
 import java.time.Duration;
@@ -26,7 +25,6 @@ public class TemplatesSteps extends UIInteractionSteps {
 
     @Step("Check if template header is shown")
     public boolean templateHeaderByNameIsShown() {
-        // <h1 class="J10DkvlRVMpQ3w">Kanban Template</h1>
         By selected_template_title = By.xpath(String.format("//h1[text()='%s']", templateName));
 
         return withTimeoutOf(Duration.ofSeconds(10)).find(selected_template_title).isDisplayed();
