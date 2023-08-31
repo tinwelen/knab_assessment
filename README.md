@@ -72,5 +72,5 @@ Tests run in headless mode by default, which can be configured in the `src/test/
 The test results will be recorded in the `target/site/serenity` directory.
 
 ## Reports
-Full Serenity report with html representation is triggered by either running the whole suite with `mvn verify`, or executing `mvn serenity:aggregate` from the command line or IDE after manually running one or more tests.
+Full Serenity report with html representation is triggered by either running the whole suite with `mvn verify`, or executing `mvn serenity:aggregate` from the command line or IDE after manually running one or more tests. The resulting report can be found in `/target/site/serenity/index.html` file.
 
