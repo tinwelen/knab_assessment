@@ -34,7 +34,7 @@ Cross browser tests are partially covered by automated scenarios with possibilit
 
 Omitting articles in step declarations for a more concise appearance.
 
-## Project structure:
+### Project structure:
 
 `src/test/resources/features` holds all the feature files in the project, representing all the test cases created, both automated and not.
 
@@ -42,7 +42,7 @@ Omitting articles in step declarations for a more concise appearance.
 
 `src/test/java/.../CucumberTestSuite.java` is a runner class, necessary to run all the cases in one go.
 
-# Automated cases details
+### Automated cases details
 Atlassian login shows up sometimes instead of trello login, causing test failures. Haven't fixed this behaviour within the assessment scope, since Atlassian elements are not directly accessible (blank page in reports). The easiest way to check the failed test is to run it manually, or rerun mvn verify.
 
 API automation unites POST, GET and DELETE methods ( = three atomic cases) in one scenario to keep the data clean. Better approach is to divide scenarios and use:
